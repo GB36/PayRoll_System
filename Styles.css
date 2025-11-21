@@ -164,6 +164,22 @@ body{
     width: 100%;
 }
 
+.MidMainContent .list{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-top: none;
+}
+
+.list li::marker{
+    color: cadetblue;
+    font-size: 1.3rem ;
+}
+
+.list h3{
+    font-weight: bold;
+}
+
 .footer_card{
     display: flex;
     flex-direction: column;
@@ -182,6 +198,11 @@ body{
     font-weight: bold;
 }
 
+.footer_card p{
+    color: white;
+    margin-bottom: 30px;
+}
+
 #Start_btn2{
     padding: 17px 25px;
     border: none;
@@ -192,6 +213,13 @@ body{
     font-size: 15px;
     box-shadow: 2px 2px 5px rgb(155, 154, 154);
 }
+
+#Start_btn2:hover{
+    cursor: pointer;
+    background-color: rgba(95, 158, 160, 0.568);
+    color: white;
+}
+
 
 .Footer{
     background-color: cadetblue;
