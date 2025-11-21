@@ -1,6 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
+    width: 100%;
+    background-color: rgba(131, 131, 131, 0.404);
 }
 
 .Header{
@@ -10,7 +16,7 @@ body{
     justify-content: space-between;
     height: 60px;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px;
     margin: 0;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
@@ -68,3 +74,128 @@ body{
 /* .Header_link button:active{
     background-color: navy;
 } */
+
+.MainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.MainContent .MainContent_buttons{
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.MainContent #Start_btn{
+    padding: 17px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgb(155, 154, 154);
+}
+
+#Start_btn::after{
+    content: "→";
+    margin-left: 8px;
+}
+
+.MainContent #Start_btn:hover{
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+.MainContent #Sign_btn{
+    padding: 16px 25px;
+    border: 2px solid cornflowerblue;
+    border-radius: 6px;
+    background-color: white;
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgb(155, 154, 154);
+}
+
+.MainContent #Sign_btn:hover{
+    background-color: rgb(150, 182, 240);
+    border: 2px solid rgb(150, 182, 240);
+    color: white;
+    cursor: pointer;
+}
+
+.MainContent .card_layout{
+    display: flex;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(66, 64, 64);
+    padding: 10px 15px;
+}
+
+/* #card h1{
+    margin: 10px 0;
+} */
+
+.MidMainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    background-color: white;
+    width: 100%;
+}
+
+.footer_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    margin: 30px 0 30px 0;
+}
+
+.footer_card h1{
+    color: white;
+    font-weight: bold;
+}
+
+#Start_btn2{
+    padding: 17px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgb(155, 154, 154);
+}
+
+.Footer{
+    background-color: cadetblue;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
