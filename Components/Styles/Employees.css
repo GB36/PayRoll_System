@@ -111,7 +111,6 @@ body{
 .navbar_l button:hover{
     background-color: darkblue;
     cursor: pointer;
-    opacity: 0.9;
 }
 
 .nav_footer{
@@ -137,104 +136,38 @@ body{
     padding: 0;
 }
 
-/* MAIN_CONTENT_CSS */
-
-.MainContent{
+.mainContent{
+    padding: 40px;
+    background-color: rgba(112, 112, 255, 0.575);
+    height: 100%;
     width: 100%;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 8px rgb(0,0,0,0.1);
+}
+
+th, td{
     padding: 10px;
+    text-align: left;
 }
 
-.MainContent h1{
-    margin: 10px 10px;
-}
-
-.MainContent p{
-    margin: 0 0 20px 20px ;
-    padding: 0 10px;
-}
-
-.card_layout1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin: 10px auto;
-    height: 35%;
-    width: 95%;
-}
-
-.card_layout1 div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    justify-content: start;
-    width: 30%;
-    height: auto;
-    min-height: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(66, 64, 64);
-    padding: 10px 15px;
-}
-
-.card_layout1 div img{
-    margin: 5px 0;
-}
-
-.card_layout1 div h1{
-    margin: 10px 0;
-    padding: 20px 0;
-}
-
-.card_layout1 div h3{
-    margin: 10px 0;
-    padding: 20px 0;
-}
-
-.run_pay{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: cadetblue;
+th{
+    background-color: #2f6fed;
     color: white;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgb(155, 154, 154);
 }
 
-.run_pay:hover{
-    background-color: darkblue;
-    cursor: pointer;
+tr:nth-child(even){
+    background-color: #f1f3f7;
 }
 
-.summary_card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    justify-content: start;
-    margin: 30px 0;
-    width: 100%;
-    background-color: cornflowerblue;
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(66, 64, 64);
-    padding: 10px 15px;
-}
 
-.links{
-    display: flex;
-    width: 40%;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-}
 
-.links a{
-    text-decoration: none;
-    color: cornflowerblue;
-}
+
+
+
