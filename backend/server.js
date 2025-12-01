@@ -1,19 +1,36 @@
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
+const path = require("path");
+
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 const connectDB = require("./config/db");
 
 const app = express();
+
+// Connect to MongoDB
+console.log('Using env file:', path.join(__dirname, '.env'));
+// console.log('MONGO_URI (from env):', process.env.MONGO_URI ? '[REDACTED]' : process.env.MONGO_URI);
+connectDB();
 
 //Middlewares
 app.use(cors());
 app.use(express.json());
 
+// Simple request logger (helps debug routing issues)
+app.use((req, res, next) => {
+    console.log(`${new Date().toISOString()} -> ${req.method} ${req.url}`);
+    if (req.method === 'POST' || req.method === 'PUT') {
+        console.log('Body:', req.body);
+    }
+    next();
+});
+
 // Route
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/employees", require("./routes/employeeRoutes"));
 
 app.get("/", (req, res) => {
-    res.send("Payroll API is running...");
+    res.send("Payroll API is running...ohk");
 });
 
 const PORT = process.env.PORT || 5000;
