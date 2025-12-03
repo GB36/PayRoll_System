@@ -28,6 +28,8 @@ app.use((req, res, next) => {
 // Route
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/employees", require("./routes/employeeRoutes"));
+app.use("/api/payroll", require("./routes/payrollRoutes"));
+app.use("/api/payslip", require("./routes/payslipRoutes"));
 
 app.get("/", (req, res) => {
     res.send("Payroll API is running...ohk");

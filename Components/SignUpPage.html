@@ -15,28 +15,37 @@
             <img src="" alt="">
             <h1>Welcome to PayRoll</h1>
             <p>Enter your credentials to create your account</p>
-            <div class="input">
-                <label for="name">FirstName</label>
-                <input type="text" placeholder="First Name" id="name">
-                <label for="name">LastName</label>
-                <input type="text" placeholder="Last Name" id="name">
-                <label for="email">Email</label>
-                <input type="email" placeholder="you@company.com" id="email"></input>
-                <label for="password">Password</label>
-                <input type="password" placeholder="password" name="" id="password">
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" placeholder="Confirm password" name="" id="confirm_password">
-            </div>
-            <!-- <div class="pass_rem">
-                <div class="check">
-                    <input type="checkbox" name="" id="remember_check">
-                    <label for="remember_check">Remember Me</label>
+            <form id="signupForm" class="input">
+                <div class="input">
+                    <label for="first_name">FirstName</label>
+                    <input type="text" placeholder="First Name" id="first_name" required>
+                    <label for="last_name">LastName</label>
+                    <input type="text" placeholder="Last Name" id="last_name" required>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="you@company.com" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" name="" id="password" required>
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" name="" id="confirm_password" required>
                 </div>
-                <a href="">Forgot password?</a>
-            </div> -->
-            <button type="submit" class="signup_btn">Sign Up</button>
+                
+                <!-- <div class="pass_rem">
+                    <div class="check">
+                        <input type="checkbox" name="" id="remember_check">
+                        <label for="remember_check">Remember Me</label>
+                    </div>
+                    <a href="">Forgot password?</a>
+                </div> -->
+
+                <button type="submit" class="signup_btn">Sign Up</button>
+            
+            </form>
+            
+            <p id="message"></p>
             <!-- <p">Don't have an account?  <span class="sign_up1"><a href="./SignUpPage.html">Sign Up</a></span></p> -->
         </div>
     </div>
+
+    <script src="../Components/Scripts/signup.js"></script>
 </body>
 </html>

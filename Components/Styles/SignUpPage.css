@@ -37,7 +37,8 @@ body{
     /* min-width: 400px;
     max-width: 700px; */
     width: 60%;
-    border: 1px solid black;
+    border: none;
+    box-shadow: 2px 2px 5px rgb(155, 154, 154);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -59,6 +60,7 @@ body{
     width: 100%;
     min-width: 365px;
     margin-top: 10px;
+    font-weight: 500;
 }
 
 .input input{
@@ -70,6 +72,7 @@ body{
     border-radius: 25px;
     line-height: 100%;
     margin: 5px 0 15px;
+    font-size: 15px;
 }
 
 .input label{
@@ -93,4 +96,10 @@ body{
 .signup_btn:hover{
     cursor: pointer;
     background-color: rgb(55, 127, 129);
+}
+
+#message{
+    font-size: larger;
+    font-weight: 400;
+
 }
