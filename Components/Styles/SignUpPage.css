@@ -19,7 +19,7 @@ body{
 
 .infobox{
     width: 40%;
-    min-height: 670px;
+    min-height: 670px;                                                  
     height: 100vh;
     background-color: cadetblue;
     color: white;
@@ -81,7 +81,7 @@ body{
 }
 
 .signup_btn{
-    margin: 30px 0;
+    margin: 20px 0;
     width: 80%;
     font-size: 16px;
     padding: 15px 15px;
@@ -96,6 +96,16 @@ body{
 .signup_btn:hover{
     cursor: pointer;
     background-color: rgb(55, 127, 129);
+}
+
+#haveAccount{
+    margin: 0;
+}
+
+a {
+    margin: 0;
+    text-decoration: none;
+    color: cornflowerblue;
 }
 
 #message{

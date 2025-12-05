@@ -26,6 +26,8 @@ body{
     background: #ffffffcc;
     backdrop-filter: blur(6px);
     z-index: 1000;
+    background: linear-gradient(90deg, cadetblue, #ffffff);
+
 }
 
 .logo{
@@ -33,6 +35,15 @@ body{
     min-width: 180px;
     padding-left: 20px;
 }
+
+.logo h1{
+    margin: 5px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(16, 86, 88);
+}
+
 
 .navbar{
     flex: 0 0 30%;
@@ -102,7 +113,7 @@ body{
     width: 240px;
     min-width: 180px;
     padding: 18px 8px;
-    background: linear-gradient(180deg, #f7f9fc, #ffffff);
+    background: linear-gradient(180deg, cadetblue, #ffffff);
     box-shadow: 2px 0 6px rgba(0,0,0,0.04);
 }
 
@@ -128,7 +139,8 @@ body{
 }
 
 .navbar_l button:hover{
-    background-color: darkblue;
+    background-color: rgb(51, 130, 133);
+    opacity: 0.9;
     cursor: pointer;
 }
 
@@ -147,13 +159,19 @@ body{
 
 .name {
     display: flex;
-    flex-direction: column;
+    width: 200px;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0;
     padding: 0;
 }
 
+#logout {
+    margin-left: 5px;
+    text-decoration: none;
+    color: cornflowerblue;
+}
 
 /* MAIN_CONTENT_CSS */
 
@@ -171,10 +189,71 @@ body{
     height: calc(100vh - 70px);
     overflow-y: auto;
     background: linear-gradient(180deg, #f1f6fb, #ffffff);
+    /* background-color: red; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; */
+
 }
 
+.ask{
+    height:70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#employeeId{
+    width: 200px;
+    padding: 6px 12px;
+    margin: 2px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgb(155, 154, 154);
+
+}
+
+#period{
+    width: 200px;
+    padding: 6px 12px;
+    margin: 2px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgb(155, 154, 154);
+}
+
+#paybtn{
+    background-color: cadetblue;
+    color: white;
+    padding: 5px 9px;
+    border: none;
+    margin: 8px;
+    width: 160px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgb(155, 154, 154);
+    cursor: pointer;
+}
+
+#paybtn:hover{
+    background-color: rgb(51, 130, 133);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#output{
+    display: none;
+}
+
+
 .payslip-box {
-    background: white;
+    background: #ffffff;
     margin: auto;
     width: 800px;
     padding: 30px;
@@ -182,15 +261,29 @@ body{
     box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
 }
 
+
 .payslip-header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payslip-header h2{
+    font-size: 25px;
+}
+
+.payslip-header p{
+    margin: 5px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .line {
     height: 1px;
     background: #ccc;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 table {
@@ -211,13 +304,20 @@ td {
     background: #eef2ff;
     padding: 15px;
     border-radius: 8px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: 18px;
     font-weight: bold;
 }
 
+.bu{
+    height:50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .print-btn {
-    margin-top: 20px;
     background-color: cadetblue;
     color: white;
     padding: 10px 20px;
@@ -234,7 +334,7 @@ td {
     background-color: rgb(51, 130, 133);
     opacity: 0.9;
     cursor: pointer;
-}
+} */
 
 
 /* nicer scrollbar for the main area */

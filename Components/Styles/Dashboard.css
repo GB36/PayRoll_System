@@ -26,12 +26,22 @@ body{
     background: #ffffffcc;
     backdrop-filter: blur(6px);
     z-index: 1000;
+    background: linear-gradient(90deg, cadetblue, #ffffff);
+
 }
 
 .logo{
     flex: 0 0 30%;
     min-width: 180px;
     padding-left: 20px;
+}
+
+.logo h1{
+    margin: 5px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(16, 86, 88);
 }
 
 .navbar{
@@ -102,7 +112,7 @@ body{
     width: 240px;
     min-width: 180px;
     padding: 18px 8px;
-    background: linear-gradient(180deg, #f7f9fc, #ffffff);
+    background: linear-gradient(180deg, cadetblue, #ffffff);
     box-shadow: 2px 0 6px rgba(0,0,0,0.04);
 }
 
@@ -148,11 +158,18 @@ body{
 
 .name {
     display: flex;
-    flex-direction: column;
+    width: 200px;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0;
     padding: 0;
+}
+
+#logout {
+    margin-left: 5px;
+    text-decoration: none;
+    color: cornflowerblue;
 }
 
 

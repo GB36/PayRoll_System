@@ -12,7 +12,7 @@
         <!--HEADER-->
         <div class="header">
             <div class="logo">
-                <h3>PayRoll</h3>
+                <h1>PayRoll</h1>
             </div>
             <div class="navbar">
                 <input type="text" placeholder="Search..." name="search" id="search_bar">
@@ -25,24 +25,25 @@
         <div class="content">
 
             <!--NAV_BAR-->
-            <div class="navbar_static">
+            <aside class="navbar_static">
                 <div class="navbar_l">
-                <button type="">Dashboard</button>
-                <button type="">Employees</button>
-                <button type="">Payroll Run</button>
-                <button type="">Payslips</button>                    
-                <button type="">Settings</button>
+                    <button type="button" id="nav_dashboard">Dashboard</button>
+                    <button type="button" id="nav_employee">Employees</button>
+                    <button type="button" id="nav_payroll">Payroll Run</button>
+                    <button type="button" id="nav_payslip">Payslips</button>
+                    <button type="button" id="nav_setting">Settings</button>
             </div>
             <div class="nav_footer">
                 <div class="profile_">JD</div>
                 <div class="name">
                     <p>
-                        John Doe <br>
-                        <span>Admin</span>
+                        <span id="emp_name">John Doe</span> <br>
+                        <span id="role">Admin</span>
                     </p>
+                    <a href="LoginPage.html" id="logout">Logout</a>
                 </div>
                 </div>
-            </div>
+            </aside>
         
 
         <!--MAIN_CONTENT-->
@@ -53,8 +54,8 @@
                         <p>Manage your team and employee information</p>
                     </div>
                     <div class="top_buttons">
-                        <button class="run_pay">Add Employee</button>
-                        <button class="run_pay">Import CSV</button>
+                        <button class="run_pay" id="addEmployee" type="button">Add Employee</button>
+                        <!-- <button class="run_pay" onclick="loadEmployees()">Import CSV</button> -->
                     </div>
                 </div>
                     <table id="employeeTable">
@@ -62,6 +63,7 @@
                             <tr>
                             <th>Name</th>
                             <th>ID</th>
+                            <th>Email</th>
                             <th>Department</th>
                             <th>Position</th>
                             <th>Salary($)</th>
@@ -104,6 +106,27 @@
 
                 <a href="./trial.html">trial</a>
             </div>
+        </div>
+    </div>
+
+    <!-- //this is for the popup that appers when add employee is clicked -->
+    <div id="employeePopup" class="popup">
+        <div class="popup-content"> 
+            <h2>Add Employee</h2>
+
+            <input type="text" id="empName" placeholder="Full Name">
+            <input type="email" id="empEmail" placeholder="Email">
+            <input type="text" id="empDepartment" placeholder="Department">
+            <input type="text" id="empPosition" placeholder="Position">  
+            <input type="number" id="empSalary" placeholder="Salary">
+            <input type="date" id="empDate" placeholder="Date">
+            
+            <div class="but_display">
+                <button id="saveEmployee">Save</button>
+                <button id="closePopup">Cancel</button>
+            </div>
+            
+
         </div>
     </div>
 

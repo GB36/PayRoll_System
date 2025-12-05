@@ -232,6 +232,7 @@ body{
     cursor: pointer;
     background-color: rgba(95, 158, 160, 0.568);
     color: white;
+    box-shadow: none;
 }
 
 

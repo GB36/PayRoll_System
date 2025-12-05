@@ -12,7 +12,7 @@
         <!--HEADER-->
         <div class="header">
             <div class="logo">
-                <h3>PayRoll</h3>
+                <h1>PayRoll</h1>
             </div>
             <div class="navbar">
                 <input type="text" placeholder="Search..." name="search" id="search_bar">
@@ -25,81 +25,89 @@
         <div class="content">
 
             <!--NAV_BAR-->
-            <div class="navbar_static">
+            <aside class="navbar_static">
                 <div class="navbar_l">
-                <button type="">Dashboard</button>
-                <button type="">Employees</button>
-                <button type="">Payroll Run</button>
-                <button type="">Payslips</button>                    
-                <button type="">Settings</button>
-            </div>
-            <div class="nav_footer">
-                <div class="profile_">JD</div>
-                <div class="name">
-                    <p>
-                        John Doe <br>
-                        <span>Admin</span>
-                    </p>
+                    <button type="button" id="nav_dashboard">Dashboard</button>
+                    <button type="button" id="nav_employee">Employees</button>
+                    <button type="button" id="nav_payroll">Payroll Run</button>
+                    <button type="button" id="nav_payslip">Payslips</button>
+                    <button type="button" id="nav_setting">Settings</button>
                 </div>
+                <div class="nav_footer">
+                    <div class="profile_" id="profile_">JD</div>
+                    <div class="name">
+                        <p>
+                            <span id="emp_name">John Doe</span> <br>
+                            <span id="role">Admin</span>
+                        </p>
+                        <a href="LoginPage.html" id="logout">Logout</a>
+                    </div>
                 </div>
-            </div>
+            </aside>
 
             <!--MAIN_CONTENT-->
             <div class="main_area">
-                <div class="payslip-box">
-
-                    <div class="payslip-header">
-                        <h2>Payslip</h2>
-                        <p>Payroll Month: January 2025</p>
-                    </div>
-
-                    <div class="line"></div>
-
-                    <table>
-                        <tr>
-                            <td class="left">Employee Name:</td>
-                            <td>John Mensah</td>
-                        </tr>
-                        <tr>
-                            <td class="left">Position:</td>
-                            <td>Software Engineer</td>
-                        </tr>
-                        <tr>
-                            <td class="left">Employee ID:</td>
-                            <td>EMP-001</td>
-                        </tr>
-                        <tr>
-                            <td class="left">Department:</td>
-                            <td>Engineering</td>
-                        </tr>
-                    </table>
-
-                    <div class="line"></div>
-
-                    <table>
-                        <tr>
-                            <td class="left">Basic Salary:</td>
-                            <td>₵4500.00</td>
-                        </tr>
-                        <tr>
-                            <td class="left">Allowances:</td>
-                            <td>₵200.00</td>
-                        </tr>
-                        <tr>
-                            <td class="left">Deductions:</td>
-                            <td>₵150.00</td>
-                        </tr>
-                    </table>
-
-                    <div class="netpay-box">
-                        Net Salary: ₵4550.00
-                    </div>
-
-                    <button class="print-btn" onclick="window.print()">Print Payslip</button>
-
+                <div class="ask">
+                    <input type="text" id="employeeId" placeholder="Employee ID">
+                    <input type="month" id="period">
+                    <button onclick="loadPayslip()" id="paybtn">Load Payslip</button>
                 </div>
+
+                <pre id="output">
+                    <div class="payslip-box">
+
+                        <div class="payslip-header">
+                            <h2>Payslip</h2>
+                            <p id="emp_month">Payroll Month: </p>
+                        </div>
+                        <div class="line"></div>
+                        <table>
+                            <tr>
+                                <td class="left">Employee Name:</td>
+                                <td id="employee_name"></td>
+                            </tr>
+                            <tr>
+                                <td class="left">Employee ID:</td>
+                                <td id="employee_id"></td>
+                            </tr>
+                            <tr>
+                                <td class="left">Position:</td>
+                                <td id="employee_position"></td>
+                            </tr>
+                            <tr>
+                                <td class="left">Department:</td>
+                                <td id="employee_department"></td>
+                            </tr>
+                        </table>
+                        <div class="line"></div>
+                        <table>
+                            <tr>
+                                <td class="left">Basic Salary:</td>
+                                <td id="basicSalary"></td>
+                            </tr>
+                            <tr>
+                                <td class="left">Allowances:</td>
+                                <td id="allowances"></td>
+                            </tr>
+                            <tr>
+                                <td class="left">Deductions:</td>
+                                <td id="deduction"></td>
+                            </tr>
+                        </table> 
+
+                        <div class="netpay-box" id="netpay">
+                            Net Salary: 
+                        </div>
+
+                        <div class="bu">
+                            <button class="print-btn" onclick="window.print()">Print Payslip</button>
+                        </div>
+                    </div>
+                </pre>   
             </div>
         </div>
     </div>
+
+    <script src="Scripts/payslip.js"></script>
 </body>
 </html>

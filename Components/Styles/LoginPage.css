@@ -83,14 +83,33 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
+    /* background-color: red; */
 }
 
 .check{
-    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+    
+}
+
+.check input{
+    margin: 0;
+    padding: 0;
+    margin-left: -20px;
+}
+
+.check label{
+    margin: 0;
+    padding: 0;
+    margin-left: -30px;
 }
 
 .pass_rem a{
     margin-left: 40px;
+    margin-right: 10px;
     text-decoration: none;
     color: cornflowerblue;
 }

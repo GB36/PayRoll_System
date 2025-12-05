@@ -12,7 +12,7 @@
         <!--HEADER-->
         <div class="header">
             <div class="logo">
-                <h3>PayRoll</h3>
+                <h1>PayRoll</h1>
             </div>
             <div class="navbar">
                 <input type="text" placeholder="Search..." name="search" id="search_bar">
@@ -28,34 +28,34 @@
             <!--NAV_BAR (fixed sidebar)-->
             <aside class="navbar_static">
                 <div class="navbar_l">
-                    <button type="button">Dashboard</button>
-                    <button type="button">Employees</button>
-                    <button type="button">Payroll Run</button>
-                    <button type="button">Payslips</button>
-                    <button type="button">Settings</button>
+                    <button type="button" id="nav_dashboard">Dashboard</button>
+                    <button type="button" id="nav_employee">Employees</button>
+                    <button type="button" id="nav_payroll">Payroll Run</button>
+                    <button type="button" id="nav_payslip">Payslips</button>
+                    <button type="button" id="nav_setting">Settings</button>
                 </div>
                 <div class="nav_footer">
-                    <div class="profile_">JD</div>
+                    <div class="profile_" id="profile_">JD</div>
                     <div class="name">
                         <p>
-                            John Doe <br>
-                            <span>Admin</span>
+                            <span id="emp_name">John Doe</span> <br>
+                            <span id="role">Admin</span>
                         </p>
-                        <a href="LoginPage.html">Logout</a>
+                        <a href="LoginPage.html" id="logout">Logout</a>
                     </div>
                 </div>
             </aside>
 
             <!--MAIN_CONTENT-->
             <div class="main_area">
-                <h1 id="Welcome"></h1>
+                <h1 id="welcome"></h1>
                 <p>Here's an overview of your payroll.</p>
                 <div class="card_layout1">
                     <div id="card_1">
                         <img src="" alt="chart icon">
                         <h3>No payrolls yet</h3>
                         <p>Run your first payroll to see data here</p>
-                        <button class="run_pay">Run payroll</button>
+                        <button class="run_pay" id="runpay">Run payroll</button>
                     </div>
                     <div id="card_2">
                         <img src="" alt="employee icon">
@@ -75,11 +75,11 @@
                         Get started by running your first payroll or adding
                         employees to your organization
                     </p>
-                    <button class="run_pay">Run payroll</button>
+                    <button class="run_pay" id="runpay2">Run payroll</button>
                     <span class="links">
                         <a href="./Employees.html">Add employee</a> 
-                        <a href="./Payslip.html">Import CSV</a>
-                        <a href="./Payroll.html">payroll</a>
+                        <!-- <a href="./Payslip.html">Import CSV</a>
+                        <a href="./Payroll.html">payroll</a> -->
                     </span>
                 </div>
             </div>

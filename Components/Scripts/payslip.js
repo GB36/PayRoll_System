@@ -1,0 +1,59 @@
+
+document.getElementById("paybtn").addEventListener("click", () => {
+
+    async function loadPayslip(){
+        const token = localStorage.getItem("token");
+        
+        const id = document.getElementById("employeeId").value;
+        const period = document.getElementById("period").value;
+
+        const response = await fetch(`http://localahost:5000/api/payslip/${id}/${period}`, {
+            header: {
+                "Authorization": "Bearer " + token
+            }
+        });
+
+        const data = await response.json();
+        document.getElementById("output").innerText = JSON.stringify(data, null, 2)
+
+    }
+
+    //Want to add a text change so that when the slip updates with the correct values.
+    const month = document.getElementById("period");
+    const name = document.getElementById("employee_name");
+    const id = document.getElementById("employee_id");
+    const position = document.getElementById("employee_position");
+    const department = document.getElementById("employee_department");
+
+    const basicSalary = document.getElementById("basicSalary");
+    const allowances = document.getElementById("allowances");
+    const deduction = document.getElementById("deduction");
+    const netpay = document.getElementById("netpay");
+
+
+    const output = document.getElementById("output");
+    output.style.display = "flex";
+    console.log("push");
+});
+
+//THIS WILL BE THE FUNCTIONALITY OF THE NAVBAR BUTTONS
+//DASHBOARD
+document.getElementById("nav_dashboard").addEventListener("click", ()=> {
+    window.location.href = "./Dashboard.html";
+})
+//EMPLOYEE
+document.getElementById("nav_employee").addEventListener("click", ()=> {
+    window.location.href = "./Employees.html";
+})
+//PAYROLL RUN 
+document.getElementById("nav_payroll").addEventListener("click", ()=> {
+    window.location.href = "./Payroll.html";
+})
+//PAYSLIPS
+document.getElementById("nav_payslip").addEventListener("click", ()=> {
+    window.location.href = "./Payslip.html";
+})
+//SETTINGS
+document.getElementById("nav_setting").addEventListener("click", ()=> {
+    window.location.href = "./Setting.html";
+})
