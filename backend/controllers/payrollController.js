@@ -1,25 +1,28 @@
 const PayrollRun = require("../models/PayrollRun");
 const Employee = require("../models/Employee");
+const mongoose = require("mongoose");
+
 
 //Salary Calculation LOgic
 
-const calculateSalary = (employee) => {
-    let basicSalary = employee.basicSalary;
-    let allowances = employee.allowances || 0;
-    let deduction = employee.deduction || 0;
+// const calculateSalary = (employee) => {
+//     let basicSalary = employee.basicSalary;
+//     let allowances = employee.allowances || 0;
+//     let deduction = employee.deduction || 0;
 
-    let netSalary = basicSalary + allowances - deduction;
+//     let netSalary = basicSalary + allowances - deduction;
 
-    return {
-        basicSalary,
-        allowances,
-        deduction, 
-        netSalary
-    };
-}; 
+//     return {
+//         basicSalary,
+//         allowances,
+//         deduction, 
+//         netSalary
+//     };
+// }; 
 
 exports.runPayroll = async (req, res) => {
-    console.log("Payroll request body:", req.body);
+    console.log("Payroll request body:check ", req.body);
+
     try{
         const {employeeId, payPeriod, basicSalary, allowances, deductions, netSalary} = req.body;
         if(!employeeId || !payPeriod){
@@ -36,12 +39,13 @@ exports.runPayroll = async (req, res) => {
         }
 
         const payroll = await PayrollRun.create({
-            employee: employeeId,
+            employeeId: new mongoose.Types.ObjectId(employeeId),
             payPeriod,
             basicSalary,
             allowances,
             deduction: deductions,
-            netSalary
+            netSalary,
+            status: "Completed"
         });
 
         res.status(201).json({

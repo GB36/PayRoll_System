@@ -1,27 +1,35 @@
 
-document.getElementById("paybtn").addEventListener("click", () => {
+document.getElementById("paybtn").addEventListener("click", loadPayslip);
 
-    async function loadPayslip(){
-        const token = localStorage.getItem("token");
+async function loadPayslip(){
+    const token = localStorage.getItem("token");
         
-        const id = document.getElementById("employeeId").value;
-        const period = document.getElementById("period").value;
+    const id = document.getElementById("employeeId").value;
+    const period = document.getElementById("period").value;
 
-        const response = await fetch(`http://localahost:5000/api/payslip/${id}/${period}`, {
-            header: {
-                "Authorization": "Bearer " + token
-            }
-        });
+    const response = await fetch(`http://localhost:5000/api/payslip/${id}/${period}`, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
 
-        const data = await response.json();
-        document.getElementById("output").innerText = JSON.stringify(data, null, 2)
-
+    const data = await response.json();
+    console.log(data);
+        
+    if (!response.ok){
+        document.getElementById("output").innerText = data.message;
+        return;
     }
+        
+    const payslip = data.payslip;
 
+
+        
     //Want to add a text change so that when the slip updates with the correct values.
     const month = document.getElementById("period");
     const name = document.getElementById("employee_name");
-    const id = document.getElementById("employee_id");
+    const empId = document.getElementById("employee_id");
     const position = document.getElementById("employee_position");
     const department = document.getElementById("employee_department");
 
@@ -31,10 +39,28 @@ document.getElementById("paybtn").addEventListener("click", () => {
     const netpay = document.getElementById("netpay");
 
 
+    name.innerText = payslip.employee.fullname;
+    empId.innerText = payslip.employee._id;
+    position.innerText = payslip.employee.position;
+    department.innerText = payslip.employee.department;
+        
+    basicSalary.innerText = payslip.basicSalary;
+    allowances.innerText = payslip.allowances;
+    deduction.innerText = payslip.deduction;
+    netpay.innerText = payslip.netSalary;
+    month.innerText = payslip.payPeriod;
+
+    const emp_month = document.getElementById("month");
+    emp_month.textContent = payslip.payPeriod;
+
     const output = document.getElementById("output");
     output.style.display = "flex";
     console.log("push");
-});
+
+    // document.getElementById("output").innerText = JSON.stringify(data, null, 2);
+
+}
+
 
 //THIS WILL BE THE FUNCTIONALITY OF THE NAVBAR BUTTONS
 //DASHBOARD
