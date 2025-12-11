@@ -19,7 +19,8 @@ app.use(cors(
     {
         origin:[
             'http://127.0.0.1:5500',
-            'https://pay-roll-system-3vvbpz9yt-jay655-webs-projects.vercel.app'
+            'https://pay-roll-system-3vvbpz9yt-jay655-webs-projects.vercel.app',
+            'https://jay655-web.github.io/PayRoll_System/'
         ],
         method: "GET,POST,PUT,DELETE",
         credentials: true
