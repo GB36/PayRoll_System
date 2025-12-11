@@ -23,7 +23,7 @@ app.use(cors(
             'https://jay655-web.github.io/PayRoll_System/',
             // 'https://pay-roll-system2-ujki-dr0dvwgg8-jay655-webs-projects.vercel.app',
             'https://pay-roll-system2-ujki-dr0dvwgg8-jay655-webs-projects.vercel.app/Index.html',
-            ''
+            'https://payrollsystemamali.netlify.app/'
         ],
         method: "GET,POST,PUT,DELETE",
         credentials: true
